@@ -1,0 +1,242 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@500;700&display=swap');
+
+* {
+  margin: 0px;
+  padding: 0px;
+  Font-size: 15px;
+  cursor: default;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  font-family: 'League Spartan', sans-serif;
+  --Mobile: 375px;
+  --Desktop: 1440px;
+  --Desaturated-Dark-Cyan: hsl(180, 29%, 50%);
+  --Light-Grayish-Cyan-Background: hsl(180, 52%, 96%);
+  --Light-Grayish-Cyan-Filter-Tablets: hsl(180, 31%, 95%);
+  --Dark-Grayish-Cyan: hsl(180, 8%, 52%);
+  --Very-Dark-Grayish-Cyan: hsl(180, 14%, 20%);
+  --CommonHeight: 16vh;
+  --padding: 2%;
+  font-weight: 500;
+  /* outline: 2px solid red; */
+  box-sizing: border-box;
+  line-height: 20px;
+}
+
+*::-webkit-scrollbar {
+  display: none;
+}
+
+.main {
+  max-height: max-content;
+  width: 100vw;
+  background-color: var(--Light-Grayish-Cyan-Filter-Tablets);
+}
+
+header {
+  height: var(--CommonHeight);
+  background: url("C:\mine\static-job-listings-master\static-job-listing\public\images\bg-header-desktop.svg"), var(--Desaturated-Dark-Cyan);
+  position: sticky;
+  top: 0px;
+}
+
+.filterBar {
+  width: 60vw;
+  margin: auto;
+  min-height: 8vh;
+  max-height: fit-content;
+  position: sticky;
+  top: 10vh;
+  background-color: white;
+  box-shadow: 0px 4px 10px var(--Dark-Grayish-Cyan);
+}
+
+.clear {
+  border: none;
+  background-color: white;
+  color: var(--Desaturated-Dark-Cyan);
+  float: right;
+  margin: 20px;
+  font-weight: 700;
+}
+
+.Job_list_container {
+  width: 70vw;
+  position: static;
+  margin: auto;
+  margin-bottom: 7vh;
+}
+
+.Company {
+  display: flex;
+  height: var(--CommonHeight);
+  margin: 5vh 0;
+  background-color: white;
+  box-shadow: 0px 4px 10px var(--Dark-Grayish-Cyan);
+}
+
+.Company:hover {
+  border-left: 7px inset var(--Desaturated-Dark-Cyan);
+}
+
+.imgContainer {
+  width: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.CompanyLogo {
+  width: 70px;
+  height: 70px;
+  aspect-ratio: 1/1;
+  margin: 0 30px;
+}
+
+.aboutTheCompany {
+  width: 55%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.company-new-featured {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.companyName {
+  color: var(--Desaturated-Dark-Cyan);
+  font-weight: 700;
+}
+
+.new,
+.featured {
+  color: white;
+  border-radius: 25px;
+  margin: var(--padding);
+  padding: 4px 15px 1px 15px;
+  box-sizing: border-box;
+}
+
+.new {
+  background-color: var(--Desaturated-Dark-Cyan);
+}
+
+.featured {
+  background-color: var(--Very-Dark-Grayish-Cyan);
+}
+
+.Position {
+  color: var(--Very-Dark-Grayish-Cyan);
+  font-weight: 700;
+  font-size: larger;
+}
+
+.Position:hover {
+  color: var(--Desaturated-Dark-Cyan);
+}
+
+.postedAt-contract-location {
+  box-sizing: border-box;
+  display: flex;
+  justify-content: flex-start;
+  width: 100%;
+  color: var(--Dark-Grayish-Cyan);
+  padding-top: var(--padding);
+}
+
+.postedAt {
+  margin-right: var(--padding);
+}
+
+.contract,
+.location {
+  margin: 0 var(--padding);
+}
+
+.role-level-language-tools {
+  width: 40%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.role,
+.level,
+.lang,
+.tool {
+  color: var(--Desaturated-Dark-Cyan);
+  padding: 2%;
+  background-color: var(--Light-Grayish-Cyan-Filter-Tablets);
+  border-radius: 5px;
+  margin: 5px;
+  cursor: pointer;
+}
+
+.role:hover,
+.level:hover,
+.lang:hover,
+.tool:hover {
+  color: white;
+  background-color: var(--Desaturated-Dark-Cyan);
+}
+
+.attribution {
+  font-size: 12px;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 5vh;
+  background-color: white;
+  padding: 1vh;
+  box-sizing: border-box;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media screen and (max-width:700px) {
+  header {
+    background: url("C:\mine\static-job-listings-master\static-job-listing\public\images\bg-header-mobile.svg"), var(--Desaturated-Dark-Cyan);
+  }
+
+  .Job_list_container {
+    width: 100vw;
+  }
+
+  .filterBar {
+    width: 90%;
+  }
+
+  .Company {
+    flex-direction: column;
+    height: fit-content;
+    padding: 5%;
+    width: 95%;
+    margin: 5vh 3%;
+  }
+
+  .imgContainer {
+    /* margin: 2%; */
+    margin-top: -50px;
+    margin-left: -5%;
+  }
+
+  .aboutTheCompany,
+  .role-level-language-tools {
+    width: 100%;
+    justify-content: flex-start;
+    margin: 5px;
+  }
+
+  .aboutTheCompany {
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--Very-Dark-Grayish-Cyan);
+  }
+}
