@@ -13,14 +13,14 @@ const Joblist = () => {
     dispatch(add(event.target.innerText))
   }
 
-  const search = Data.filter(company => company.level.includes(filterTablets.map(i => i)) && company.role.includes(filterTablets.map(i => i)))
+  const search = Data.filter(company => company.level.includes(filterTablets.map(i => i)) || company.role.includes(filterTablets.map(i => i)))
 
-  console.log(search)
+  
   return (
     <>
       <div className='Job_list_container'>
         {filterTablets.length !== 0 && <FilterBar />}
-        {Data && Data.map(company => {
+        {Data && search.map(company => {
           return (
             <div className='Company' key={company.id}>
               <div className='imgContainer'><img className='CompanyLogo' src={company.logo} alt="logo img" /></div>
